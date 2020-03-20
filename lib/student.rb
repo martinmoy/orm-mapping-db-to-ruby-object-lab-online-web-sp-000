@@ -78,7 +78,7 @@ class Student
       FROM students
       Where grade = 10
       Limit ?
-      
+
     SQL
 
     DB[:conn].execute(sql).map do |row|
