@@ -76,8 +76,6 @@ class Student
     sql = <<-SQL
       SELECT *
       FROM students
-      Where grade = 10
-      Limit ?
 
     SQL
 
@@ -90,6 +88,8 @@ class Student
     ql = <<-SQL
       SELECT *
       FROM students
+      Where grade = 10
+      Limit ?
     SQL
 
     DB[:conn].execute(sql, x).map do |row|
